@@ -1,0 +1,28 @@
+---
+title: "Untitled"
+author: "Allie Cole"
+date: "4/12/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(here)
+```
+
+```{r}
+source(here("R", "compute_diversity.R"))
+
+flower_types <- c("rose", "sunflower", "tulip", "pansy", "poppy")
+
+garden <- sample(flower_types, size = 30, replace = TRUE)
+garden
+
+
+compute_diversity(garden)
+
+#I added a line in teh function to get the least common flower, 
+  #leastfreq <- names(which.min(ssp))
+
+```
+
